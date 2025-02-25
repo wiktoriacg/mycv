@@ -138,7 +138,11 @@ h3 {
     white-space: nowrap;
     margin-left: auto;
 }
-
+.download-buttons {
+    display: flex;
+    gap: 10px; 
+    margin-top: 20px;
+}
 .download-pdf {
     display: inline-block;
     margin-top: 20px;
@@ -147,6 +151,8 @@ h3 {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    flex: 1; 
+    text-align: center;
 }
 
 a:hover {
@@ -242,11 +248,12 @@ a:hover {
     h2, h3 {
         font-size: 16px; /* Mniejszy rozmiar czcionki na telefonach */
     }
+    .download-buttons {
+        flex-direction: column; /* Przyciski pod sobą na telefonach */
+    }
 
     .download-pdf {
         width: 100%; /* Pełna szerokość przycisku */
-        text-align: center; /* Wyśrodkowanie tekstu */
-        margin-top: 20px; /* Dodanie marginesu od góry */
     }
 }
 
