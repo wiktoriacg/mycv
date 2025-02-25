@@ -206,23 +206,26 @@ a:hover {
 @media (max-width: 767px) {
     body {
         overflow-x: auto; /* Przewijanie poziome dla całej strony */
-        min-width: 900px; /* Minimalna szerokość strony (dostosuj do potrzeb) */
+        min-width: 1000px; /* Zwiększona minimalna szerokość strony (dostosuj do potrzeb) */
+        padding-right: 20px; /* Dodanie paddingu po prawej stronie */
     }
 
     .cv-container {
         display: flex;
         flex-direction: row; /* Dwie kolumny: sidebar i content */
-        min-width: 900px; /* Minimalna szerokość kontenera (dostosuj do potrzeb) */
+        min-width: 1000px; /* Zwiększona minimalna szerokość kontenera (dostosuj do potrzeb) */
     }
 
     .sidebar {
         width: 30%; /* Szerokość sidebara */
         flex-shrink: 0; /* Zapobiega zmniejszaniu się sidebara */
+        padding-right: 20px; /* Dodanie paddingu po prawej stronie sidebara */
     }
 
     .content {
         width: 70%; /* Szerokość głównej zawartości */
         flex-shrink: 0; /* Zapobiega zmniejszaniu się contentu */
+        padding-right: 20px; /* Dodanie paddingu po prawej stronie contentu */
     }
 
     header {
