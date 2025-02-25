@@ -205,56 +205,41 @@ a:hover {
 /* Responsywne style dla telefonów */
 @media (max-width: 767px) {
     .cv-container {
-        flex-direction: column; /* Zmiana układu na kolumnowy */
-    }
-
-    /* Kolejność elementów na telefonie */
-    header {
-        order: 1; /* Header na górze */
+        display: flex;
+        flex-direction: row; /* Dwie kolumny: sidebar i content */
+        overflow-x: auto; /* Przewijanie poziome, jeśli zawartość jest zbyt szeroka */
     }
 
     .sidebar {
-        order: 2; /* Zdjęcie i sidebar po headerze */
+        width: 40%; /* Szerokość sidebara na telefonach */
+        flex-shrink: 0; /* Zapobiega zmniejszaniu się sidebara */
+        overflow-y: auto; /* Przewijanie pionowe, jeśli zawartość jest zbyt długa */
     }
 
     .content {
-        order: 3; /* Reszta sekcji po sidebare */
+        width: 60%; /* Szerokość głównej zawartości na telefonach */
+        flex-shrink: 0; /* Zapobiega zmniejszaniu się contentu */
+        overflow-y: auto; /* Przewijanie pionowe, jeśli zawartość jest zbyt długa */
     }
 
-    .download-pdf {
-        order: 4; /* Przycisk do pobierania na końcu */
-        width: 100%; /* Pełna szerokość przycisku */
-        text-align: center; /* Wyśrodkowanie tekstu */
-        margin-top: 20px; /* Dodanie marginesu od góry */
-    }
-
-    /* Dostosowanie szerokości i paddingu */
-    .sidebar, .content {
-        width: 100%; /* Pełna szerokość na telefonach */
-        padding: 10px; /* Mniejszy padding */
+    header {
+        width: 100%; /* Header zajmuje całą szerokość contentu */
     }
 
     .photo {
-        width: 150px; /* Mniejsza szerokość zdjęcia */
-        height: 150px; /* Mniejsza wysokość zdjęcia */
-        margin: 0 auto 20px; /* Wyśrodkowanie zdjęcia */
+        width: 100px; /* Mniejsza szerokość zdjęcia na telefonach */
+        height: 100px; /* Mniejsza wysokość zdjęcia na telefonach */
+        margin: 0 auto 10px; /* Wyśrodkowanie zdjęcia */
     }
 
-    header h1 {
-        font-size: 24px; /* Mniejszy rozmiar czcionki */
-        margin-left: 0; /* Usunięcie marginesu */
+    h2, h3 {
+        font-size: 16px; /* Mniejszy rozmiar czcionki na telefonach */
     }
 
-    .sidebar {
-        border-radius: 0; /* Usunięcie zaokrąglonych rogów */
-    }
-
-    .language {
-        width: 100%; /* Pełna szerokość sekcji języków */
-    }
-
-    .cv-container::after {
-        display: none; /* Ukrycie pseudo-elementu na telefonach */
+    .download-pdf {
+        width: 100%; /* Pełna szerokość przycisku */
+        text-align: center; /* Wyśrodkowanie tekstu */
+        margin-top: 20px; /* Dodanie marginesu od góry */
     }
 }
 
