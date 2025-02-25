@@ -206,14 +206,14 @@ a:hover {
 @media (max-width: 767px) {
     body {
         overflow-x: auto; /* Przewijanie poziome dla całej strony */
-        min-width: 1000px; /* Zwiększona minimalna szerokość strony (dostosuj do potrzeb) */
+        min-width: 1200px; /* Zwiększona minimalna szerokość strony (dostosuj do potrzeb) */
         padding-right: 20px; /* Dodanie paddingu po prawej stronie */
     }
 
     .cv-container {
         display: flex;
         flex-direction: row; /* Dwie kolumny: sidebar i content */
-        min-width: 1000px; /* Zwiększona minimalna szerokość kontenera (dostosuj do potrzeb) */
+        min-width: 1200px; /* Zwiększona minimalna szerokość kontenera (dostosuj do potrzeb) */
     }
 
     .sidebar {
@@ -233,8 +233,8 @@ a:hover {
     }
 
     .photo {
-        width: 150px; /* Szerokość zdjęcia */
-        height: 150px; /* Wysokość zdjęcia */
+        width: 200px; /* Szerokość zdjęcia */
+        height: 200px; /* Wysokość zdjęcia */
         margin: 0 auto 20px; /* Wyśrodkowanie zdjęcia */
     }
 
