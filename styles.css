@@ -204,22 +204,25 @@ a:hover {
 
 /* Responsywne style dla telefonów */
 @media (max-width: 767px) {
+    body {
+        overflow-x: auto; /* Przewijanie poziome dla całej strony */
+        min-width: 900px; /* Minimalna szerokość strony (dostosuj do potrzeb) */
+    }
+
     .cv-container {
         display: flex;
         flex-direction: row; /* Dwie kolumny: sidebar i content */
-        overflow-x: auto; /* Przewijanie poziome, jeśli zawartość jest zbyt szeroka */
+        min-width: 900px; /* Minimalna szerokość kontenera (dostosuj do potrzeb) */
     }
 
     .sidebar {
-        width: 40%; /* Szerokość sidebara na telefonach */
+        width: 30%; /* Szerokość sidebara */
         flex-shrink: 0; /* Zapobiega zmniejszaniu się sidebara */
-        overflow-y: auto; /* Przewijanie pionowe, jeśli zawartość jest zbyt długa */
     }
 
     .content {
-        width: 60%; /* Szerokość głównej zawartości na telefonach */
+        width: 70%; /* Szerokość głównej zawartości */
         flex-shrink: 0; /* Zapobiega zmniejszaniu się contentu */
-        overflow-y: auto; /* Przewijanie pionowe, jeśli zawartość jest zbyt długa */
     }
 
     header {
@@ -227,9 +230,9 @@ a:hover {
     }
 
     .photo {
-        width: 100px; /* Mniejsza szerokość zdjęcia na telefonach */
-        height: 100px; /* Mniejsza wysokość zdjęcia na telefonach */
-        margin: 0 auto 10px; /* Wyśrodkowanie zdjęcia */
+        width: 150px; /* Szerokość zdjęcia */
+        height: 150px; /* Wysokość zdjęcia */
+        margin: 0 auto 20px; /* Wyśrodkowanie zdjęcia */
     }
 
     h2, h3 {
