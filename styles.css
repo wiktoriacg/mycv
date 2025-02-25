@@ -206,15 +206,30 @@ a:hover {
 @media (max-width: 767px) {
     .cv-container {
         flex-direction: column; /* Zmiana układu na kolumnowy */
+        padding: 10px; /* Dodanie paddingu, aby uniknąć przycinania */
+        margin: 0; /* Usunięcie marginesów */
+        width: 100%; /* Pełna szerokość */
+        box-sizing: border-box; /* Uwzględnienie paddingu w szerokości */
     }
 
     .sidebar, .content {
         width: 100%; /* Pełna szerokość na telefonach */
+        padding: 10px; /* Mniejszy padding */
     }
 
     .photo {
         width: 150px; /* Mniejsza szerokość zdjęcia */
         height: 150px; /* Mniejsza wysokość zdjęcia */
+        margin: 0 auto 20px; /* Wyśrodkowanie zdjęcia */
+    }
+
+    header {
+        order: 2; /* Przeniesienie header pod zdjęcie */
+        margin-top: 20px; /* Dodanie marginesu od góry */
+        padding: 20px; /* Dostosowanie paddingu */
+        text-align: center; /* Wyśrodkowanie tekstu */
+        width: 100%; /* Pełna szerokość */
+        margin-left: 0; /* Usunięcie marginesu */
     }
 
     header h1 {
@@ -224,6 +239,7 @@ a:hover {
 
     .sidebar {
         border-radius: 0; /* Usunięcie zaokrąglonych rogów */
+        order: 1; /* Zdjęcie i sidebar na górze */
     }
 
     .language {
@@ -233,6 +249,10 @@ a:hover {
     .download-pdf {
         width: 100%; /* Pełna szerokość przycisku */
         text-align: center; /* Wyśrodkowanie tekstu */
+    }
+
+    .cv-container::after {
+        display: none; /* Ukrycie pseudo-elementu na telefonach */
     }
 }
 
