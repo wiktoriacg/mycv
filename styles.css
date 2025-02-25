@@ -234,8 +234,8 @@ a:hover {
     }
 
     .photo {
-        width: 300px; /* Szerokość zdjęcia */
-        height: 300px; /* Wysokość zdjęcia */
+        width: 400px; /* Szerokość zdjęcia */
+        height: 400px; /* Wysokość zdjęcia */
         margin: 0 auto 20px; /* Wyśrodkowanie zdjęcia */
     }
 
